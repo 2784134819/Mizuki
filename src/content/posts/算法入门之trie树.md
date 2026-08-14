@@ -1,8 +1,8 @@
----
+﻿---
 title: "算法入门之Trie树"
 published: 2026-03-12
 description: "Trie 字典树入门，讲解如何利用公共前缀高效存储与查找字符串集合，附插入与查询的 Java 实现。"
-tags: [算法, 数据结构, 字典树, Trie, Java]
+tags: [算法入门, Trie, 字典树]
 category: "算法入门"
 draft: false
 ---

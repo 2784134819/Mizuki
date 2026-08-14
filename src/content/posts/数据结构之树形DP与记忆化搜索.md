@@ -1,8 +1,8 @@
----
+﻿---
 title: "数据结构之树形DP与记忆化搜索"
 published: 2026-03-31
 description: "树形 DP（没有上司的舞会）与记忆化搜索（最长滑雪轨迹）的入门讲解与 Java 实现。"
-tags: [数据结构, 动态规划, 树形DP, 记忆化搜索, Java]
+tags: [数据结构, 树形DP, 记忆化搜索]
 category: "数据结构"
 draft: false
 ---

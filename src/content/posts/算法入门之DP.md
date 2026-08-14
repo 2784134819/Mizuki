@@ -1,8 +1,8 @@
----
+﻿---
 title: "算法入门之DP"
 published: 2026-03-12
 description: "动态规划入门笔记，涵盖 0-1 背包、完全背包、多重背包、分组背包，以及线性 DP、区间 DP 与数位 DP 的状态转移与实现。"
-tags: [算法, 动态规划, DP, 背包问题, Java]
+tags: [算法入门, 动态规划, 背包问题]
 category: "算法入门"
 draft: false
 ---

@@ -1,8 +1,8 @@
----
+﻿---
 title: "数据结构之数位统计与状态压缩DP"
 published: 2026-03-31
 description: "数位统计（按位枚举求数字出现次数）与状态压缩 DP（蒙德里安的梦想、最短 Hamilton 路径）的入门讲解与 Java 实现。"
-tags: [数据结构, 动态规划, 数位DP, 状态压缩, Java]
+tags: [数据结构, 数位DP, 状态压缩]
 category: "数据结构"
 draft: false
 ---

@@ -1,8 +1,8 @@
----
+﻿---
 title: "算法入门之DFS和BFS"
 published: 2026-03-12
 description: "深度优先搜索与广度优先搜索入门，包括全排列、N 皇后、单词搜索与走迷宫等经典例题的讲解与 Java 实现。"
-tags: [算法, DFS, BFS, 搜索, Java]
+tags: [算法入门, DFS, BFS]
 category: "算法入门"
 draft: false
 ---

@@ -1,8 +1,8 @@
----
+﻿---
 title: "数据结构之Java输入输出优化"
 published: 2026-03-31
 description: "Scanner 与 BufferedReader 的性能对比与原因分析，竞赛刷题常用的 Java 快读快写技巧。"
-tags: [Java, 输入输出, 性能优化]
+tags: [数据结构, Java, 输入输出]
 category: "数据结构"
 draft: false
 ---
