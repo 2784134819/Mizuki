@@ -37,9 +37,9 @@ export const siteConfig: SiteConfig = {
 		// 顶栏标题文本
 		text: "Stella的个人博客",
 		// 顶栏标题图标路径，默认使用 public/assets/home/home.webp
-		icon: "assets/home/home.webp",
+		icon: "https://image-blog-1334327128.cos.ap-guangzhou.myqcloud.com/image/stella-orbit.svg",
 		// 网站Logo图片路径
-		logo: "assets/home/default-logo.webp",
+		logo: "https://image-blog-1334327128.cos.ap-guangzhou.myqcloud.com/image/stella-orbit.svg",
 	},
 
 	// 旧版页面自动缩放配置。默认关闭，页面尺寸优先交由响应式布局处理。

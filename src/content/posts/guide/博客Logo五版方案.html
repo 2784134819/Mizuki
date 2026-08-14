@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stella 博客 Logo · 五版方案</title>
+<!--
+  ============================================================
+  设计系统（本文件的"合同"）
+  ============================================================
+  品牌词        STELLA（星）
+  图形母题      四角星（Stella = 星 的语义直译）
+  主色          #5656F6  = hsl(240 90% 65%)  ← 站点主题色 hue 240
+  深底          #14142C  = hsl(240 40% 13%)
+  浅底          #F6F6F9
+  墨色          #1B1B2B
+  字体          Zen Maru Gothic（站点同款，500/700/900）
+  原则          单色为主 · 圆角 · 大留白 · 无渐变 · 可缩到 16px 仍可辨
+
+  五版差异（不只是换色，是五种视觉语言）：
+  01 星线   描边线条感，轻盈呼吸
+  02 星徽   实心圆角徽章，app-icon 形态
+  03 像素星 8-bit 像素网格，复古编程感（配小写字标）
+  04 轨道星 星 + 行星轨道环，天体意象
+  05 星标字 纯字标，星形嵌入字形装饰
+  ============================================================
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#5656F6;
+    --primary-soft:hsl(240 90% 78%);
+    --deep:#14142C;
+    --paper:#F6F6F9;
+    --ink:#1B1B2B;
+    --ink-soft:#5A5A6E;
+    --hairline:#E4E4EC;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN",sans-serif;
+    background:var(--paper);color:var(--ink);
+    line-height:1.7;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:72px 40px 140px}
+
+  /* 头部 */
+  .masthead h1{font-size:34px;font-weight:900;letter-spacing:.04em}
+  .masthead .sub{margin-top:10px;color:var(--ink-soft);font-size:15px;max-width:640px}
+  .system{
+    margin-top:36px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;
+    padding:22px 26px;background:#fff;border:1px solid var(--hairline);border-radius:18px;
+  }
+  .system .tag{font-size:12px;font-weight:700;color:var(--ink-soft);letter-spacing:.08em}
+  .sw{width:34px;height:34px;border-radius:10px;border:1px solid var(--hairline)}
+  .sys-item{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--ink-soft)}
+  .sys-item b{color:var(--ink);font-weight:700}
+  .divider{flex:1;min-width:40px;height:1px;background:var(--hairline)}
+
+  /* 方案卡片 */
+  .card{
+    margin-top:64px;background:#fff;border:1px solid var(--hairline);border-radius:24px;
+    overflow:hidden;display:grid;grid-template-columns:1.25fr 1fr;
+  }
+  .stage{
+    background:
+      linear-gradient(#fff,#fff) no-repeat,
+      var(--paper);
+    display:grid;grid-template-rows:1fr 1fr;
+  }
+  .tile{display:flex;align-items:center;justify-content:center;gap:26px;padding:44px 32px;position:relative}
+  .tile.light{background:var(--paper)}
+  .tile.dark{background:var(--deep)}
+  .tile .label{
+    position:absolute;top:14px;left:18px;font-size:11px;letter-spacing:.12em;
+    font-weight:700;opacity:.55;
+  }
+  .tile.light .label{color:var(--ink)}
+  .tile.dark .label{color:#C9C9E0}
+
+  /* 字标 */
+  .wm{font-weight:900;letter-spacing:.14em}
+  .wm.upper{font-size:34px}
+  .wm.lower{font-size:36px;letter-spacing:.1em;font-weight:900}
+  .tile.light .wm{color:var(--ink)}
+  .tile.dark .wm{color:#EFEFFB}
+
+  /* 五版标记各自的容器 */
+  .mark{flex:none}
+  .mark .msvg{display:block}
+
+  .note{
+    padding:44px 40px;display:flex;flex-direction:column;gap:18px;
+    border-left:1px solid var(--hairline);
+  }
+  .num{font-size:12px;font-weight:900;letter-spacing:.22em;color:var(--primary)}
+  .note h2{font-size:26px;font-weight:900;letter-spacing:.02em}
+  .note .en{font-size:12px;color:var(--ink-soft);letter-spacing:.12em;font-weight:700}
+  .note p{font-size:14px;color:var(--ink-soft)}
+  .note p b{color:var(--ink);font-weight:700}
+  .fit{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .fit li{font-size:13px;color:var(--ink-soft);padding-left:18px;position:relative}
+  .fit li::before{content:"";position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:var(--primary);opacity:.8}
+
+  /* 小尺寸预览条 + 下载 */
+  .foot{
+    grid-column:1 / -1;border-top:1px solid var(--hairline);
+    padding:18px 40px;display:flex;align-items:center;gap:28px;flex-wrap:wrap;background:#FBFBFD;
+  }
+  .foot .cap{font-size:12px;font-weight:700;color:var(--ink-soft);letter-spacing:.1em}
+  .size-row{display:flex;align-items:flex-end;gap:22px}
+  .size-row .s{display:flex;flex-direction:column;align-items:center;gap:6px}
+  .size-row .s span{font-size:11px;color:var(--ink-soft)}
+  .size-row .s .bar{background:#fff;border:1px solid var(--hairline);border-radius:10px;padding:10px 12px}
+  .dl{
+    margin-left:auto;border:1px solid var(--primary);color:var(--primary);
+    background:none;font-family:inherit;font-size:13px;font-weight:700;
+    padding:9px 18px;border-radius:999px;cursor:pointer;letter-spacing:.05em;
+    transition:background .15s,color .15s;
+  }
+  .dl:hover{background:var(--primary);color:#fff}
+
+  .footnote{margin-top:56px;color:var(--ink-soft);font-size:13px;text-align:center}
+
+  @media (max-width:900px){
+    .wrap{padding:48px 20px 100px}
+    .card{grid-template-columns:1fr}
+    .note{border-left:none;border-top:1px solid var(--hairline)}
+    .dl{margin-left:0}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <h1>Stella 博客 Logo · 五版方案</h1>
+    <p class="sub">同一套约束（四角星 × STELLA 字标 × 靛蓝主题色 × 圆润字形），五种不同的视觉语言。每版都附浅色 / 深色底效果、小尺寸缩略预览与 SVG 下载，选出最心动的一版即可。</p>
+  </header>
+
+  <div class="system">
+    <span class="tag">DESIGN SYSTEM</span>
+    <span class="sw" style="background:var(--primary)"></span>
+    <span class="sys-item">主色 <b>#5656F6</b></span>
+    <span class="sw" style="background:var(--deep)"></span>
+    <span class="sys-item">深底 <b>#14142C</b></span>
+    <span class="sw" style="background:var(--ink)"></span>
+    <span class="sys-item">墨色 <b>#1B1B2B</b></span>
+    <span class="divider"></span>
+    <span class="sys-item">字体 <b>Zen Maru Gothic</b>（站点同款）</span>
+    <span class="divider"></span>
+    <span class="sys-item">原则：<b>单色 · 圆角 · 留白 · 无渐变</b></span>
+  </div>
+
+  <!-- ============ 01 星线 ============ -->
+  <section class="card">
+    <div class="stage">
+      <div class="tile light"><span class="label">LIGHT</span>
+        <span class="mark"><svg id="svg1" class="msvg" width="64" height="64" viewBox="0 0 64 64" fill="none"><path d="M32 6 Q40 24 58 32 Q40 40 32 58 Q24 40 6 32 Q24 24 32 6 Z" stroke="#5656F6" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+        <span class="wm upper">STELLA</span>
+      </div>
+      <div class="tile dark"><span class="label">DARK</span>
+        <span class="mark"><svg class="msvg" width="64" height="64" viewBox="0 0 64 64" fill="none"><path d="M32 6 Q40 24 58 32 Q40 40 32 58 Q24 40 6 32 Q24 24 32 6 Z" stroke="hsl(240 90% 78%)" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/></svg></span>
+        <span class="wm upper">STELLA</span>
+      </div>
+    </div>
+    <div class="note">
+      <span class="num">01 / 05</span>
+      <h2>星线 <span class="en">STARLINE</span></h2>
+      <p><b>一条线画完的四角星。</b>圆头描边、向内凹的四条边，让星形摆脱"儿童贴纸感"，显得轻盈、理性。字标加宽字距，与线条的呼吸感呼应。</p>
+      <ul class="fit">
+        <li>顶栏导航（navbar 高度友好，线型不抢内容）</li>
+        <li>文章封面水印、OG 图的角落标记</li>
+        <li>黑白打印、单色场景天然兼容</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <span class="cap">SCALE</span>
+      <div class="size-row">
+        <span class="s"><span class="bar"><svg width="48" height="48" viewBox="0 0 64 64" fill="none"><path d="M32 6 Q40 24 58 32 Q40 40 32 58 Q24 40 6 32 Q24 24 32 6 Z" stroke="#5656F6" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/></svg></span><span>48px</span></span>
+        <span class="s"><span class="bar"><svg width="24" height="24" viewBox="0 0 64 64" fill="none"><path d="M32 6 Q40 24 58 32 Q40 40 32 58 Q24 40 6 32 Q24 24 32 6 Z" stroke="#5656F6" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/></svg></span><span>24px</span></span>
+        <span class="s"><span class="bar"><svg width="16" height="16" viewBox="0 0 64 64" fill="none"><path d="M32 6 Q40 24 58 32 Q40 40 32 58 Q24 40 6 32 Q24 24 32 6 Z" stroke="#5656F6" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/></svg></span><span>16px</span></span>
+      </div>
+      <button class="dl" data-download="svg1" data-name="stella-starline.svg">下载 SVG</button>
+    </div>
+  </section>
+
+  <!-- ============ 02 星徽 ============ -->
+  <section class="card">
+    <div class="stage">
+      <div class="tile light"><span class="label">LIGHT</span>
+        <span class="mark"><svg id="svg2" class="msvg" width="64" height="64" viewBox="0 0 64 64"><rect width="64" height="64" rx="17" fill="#5656F6"/><path d="M32 14 Q38 26 50 32 Q38 38 32 50 Q26 38 14 32 Q26 26 32 14 Z" fill="#FFFFFF"/></svg></span>
+        <span class="wm upper">STELLA</span>
+      </div>
+      <div class="tile dark"><span class="label">DARK</span>
+        <span class="mark"><svg class="msvg" width="64" height="64" viewBox="0 0 64 64"><rect width="64" height="64" rx="17" fill="hsl(240 90% 68%)"/><path d="M32 14 Q38 26 50 32 Q38 38 32 50 Q26 38 14 32 Q26 26 32 14 Z" fill="#14142C"/></svg></span>
+        <span class="wm upper">STELLA</span>
+      </div>
+    </div>
+    <div class="note">
+      <span class="num">02 / 05</span>
+      <h2>星徽 <span class="en">STARBADGE</span></h2>
+      <p><b>实心圆角徽章 + 白色星形镂空。</b>app-icon 的标准形态：一个文件同时能当头像、favicon、启动图标。圆角沿用站点卡片的圆润气质，识别度在小尺寸下最高。</p>
+      <ul class="fit">
+        <li>网站 favicon / Apple Touch Icon</li>
+        <li>头像、友链页 Logo、PWA 图标</li>
+        <li>需要"图形标志独立存在"的场景</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <span class="cap">SCALE</span>
+      <div class="size-row">
+        <span class="s"><span class="bar"><svg width="48" height="48" viewBox="0 0 64 64"><rect width="64" height="64" rx="17" fill="#5656F6"/><path d="M32 14 Q38 26 50 32 Q38 38 32 50 Q26 38 14 32 Q26 26 32 14 Z" fill="#FFFFFF"/></svg></span><span>48px</span></span>
+        <span class="s"><span class="bar"><svg width="24" height="24" viewBox="0 0 64 64"><rect width="64" height="64" rx="17" fill="#5656F6"/><path d="M32 14 Q38 26 50 32 Q38 38 32 50 Q26 38 14 32 Q26 26 32 14 Z" fill="#FFFFFF"/></svg></span><span>24px</span></span>
+        <span class="s"><span class="bar"><svg width="16" height="16" viewBox="0 0 64 64"><rect width="64" height="64" rx="17" fill="#5656F6"/><path d="M32 14 Q38 26 50 32 Q38 38 32 50 Q26 38 14 32 Q26 26 32 14 Z" fill="#FFFFFF"/></svg></span><span>16px</span></span>
+      </div>
+      <button class="dl" data-download="svg2" data-name="stella-starbadge.svg">下载 SVG</button>
+    </div>
+  </section>
+
+  <!-- ============ 03 像素星 ============ -->
+  <section class="card">
+    <div class="stage">
+      <div class="tile light"><span class="label">LIGHT</span>
+        <span class="mark"><svg id="svg3" class="msvg" width="64" height="64" viewBox="0 0 64 64" shape-rendering="crispEdges"><g fill="#5656F6"><rect x="28.4" y="0"   width="7.2" height="7.2"/><rect x="28.4" y="7.1" width="7.2" height="7.2"/><rect x="21.3" y="14.2" width="7.2" height="7.2"/><rect x="35.5" y="14.2" width="7.2" height="7.2"/><rect x="21.3" y="21.3" width="7.2" height="7.2"/><rect x="35.5" y="21.3" width="7.2" height="7.2"/><rect x="7.1"  y="28.4" width="7.2" height="7.2"/><rect x="14.2" y="28.4" width="7.2" height="7.2"/><rect x="21.3" y="28.4" width="7.2" height="7.2"/><rect x="28.4" y="28.4" width="7.2" height="7.2"/><rect x="35.5" y="28.4" width="7.2" height="7.2"/><rect x="42.6" y="28.4" width="7.2" height="7.2"/><rect x="49.7" y="28.4" width="7.2" height="7.2"/><rect x="21.3" y="35.5" width="7.2" height="7.2"/><rect x="35.5" y="35.5" width="7.2" height="7.2"/><rect x="21.3" y="42.6" width="7.2" height="7.2"/><rect x="35.5" y="42.6" width="7.2" height="7.2"/><rect x="28.4" y="49.7" width="7.2" height="7.2"/><rect x="28.4" y="56.8" width="7.2" height="7.2"/></g></svg></span>
+        <span class="wm lower">stella</span>
+      </div>
+      <div class="tile dark"><span class="label">DARK</span>
+        <span class="mark"><svg class="msvg" width="64" height="64" viewBox="0 0 64 64" shape-rendering="crispEdges"><g fill="hsl(240 90% 78%)"><rect x="28.4" y="0"   width="7.2" height="7.2"/><rect x="28.4" y="7.1" width="7.2" height="7.2"/><rect x="21.3" y="14.2" width="7.2" height="7.2"/><rect x="35.5" y="14.2" width="7.2" height="7.2"/><rect x="21.3" y="21.3" width="7.2" height="7.2"/><rect x="35.5" y="21.3" width="7.2" height="7.2"/><rect x="7.1"  y="28.4" width="7.2" height="7.2"/><rect x="14.2" y="28.4" width="7.2" height="7.2"/><rect x="21.3" y="28.4" width="7.2" height="7.2"/><rect x="28.4" y="28.4" width="7.2" height="7.2"/><rect x="35.5" y="28.4" width="7.2" height="7.2"/><rect x="42.6" y="28.4" width="7.2" height="7.2"/><rect x="49.7" y="28.4" width="7.2" height="7.2"/><rect x="21.3" y="35.5" width="7.2" height="7.2"/><rect x="35.5" y="35.5" width="7.2" height="7.2"/><rect x="21.3" y="42.6" width="7.2" height="7.2"/><rect x="35.5" y="42.6" width="7.2" height="7.2"/><rect x="28.4" y="49.7" width="7.2" height="7.2"/><rect x="28.4" y="56.8" width="7.2" height="7.2"/></g></svg></span>
+        <span class="wm lower">stella</span>
+      </div>
+    </div>
+    <div class="note">
+      <span class="num">03 / 05</span>
+      <h2>像素星 <span class="en">PIXELSTAR</span></h2>
+      <p><b>8-bit 像素网格拼出的四角星。</b>用"像素"呼应博客的算法 / 代码底色，是小写的复古浪漫。小写圆润字标与硬边像素形成反差，反而更耐看。</p>
+      <ul class="fit">
+        <li>代码块页脚、关于页的趣味标记</li>
+        <li>与"算法入门"系列文章封面搭配</li>
+        <li>想要一点 geek 气质的场景</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <span class="cap">SCALE</span>
+      <div class="size-row">
+        <span class="s"><span class="bar"><svg width="48" height="48" viewBox="0 0 64 64" shape-rendering="crispEdges"><g fill="#5656F6"><rect x="28.4" y="0" width="7.2" height="7.2"/><rect x="28.4" y="7.1" width="7.2" height="7.2"/><rect x="21.3" y="14.2" width="7.2" height="7.2"/><rect x="35.5" y="14.2" width="7.2" height="7.2"/><rect x="21.3" y="21.3" width="7.2" height="7.2"/><rect x="35.5" y="21.3" width="7.2" height="7.2"/><rect x="7.1" y="28.4" width="7.2" height="7.2"/><rect x="14.2" y="28.4" width="7.2" height="7.2"/><rect x="21.3" y="28.4" width="7.2" height="7.2"/><rect x="28.4" y="28.4" width="7.2" height="7.2"/><rect x="35.5" y="28.4" width="7.2" height="7.2"/><rect x="42.6" y="28.4" width="7.2" height="7.2"/><rect x="49.7" y="28.4" width="7.2" height="7.2"/><rect x="21.3" y="35.5" width="7.2" height="7.2"/><rect x="35.5" y="35.5" width="7.2" height="7.2"/><rect x="21.3" y="42.6" width="7.2" height="7.2"/><rect x="35.5" y="42.6" width="7.2" height="7.2"/><rect x="28.4" y="49.7" width="7.2" height="7.2"/><rect x="28.4" y="56.8" width="7.2" height="7.2"/></g></svg></span><span>48px</span></span>
+        <span class="s"><span class="bar"><svg width="24" height="24" viewBox="0 0 64 64" shape-rendering="crispEdges"><g fill="#5656F6"><rect x="28.4" y="0" width="7.2" height="7.2"/><rect x="28.4" y="7.1" width="7.2" height="7.2"/><rect x="21.3" y="14.2" width="7.2" height="7.2"/><rect x="35.5" y="14.2" width="7.2" height="7.2"/><rect x="21.3" y="21.3" width="7.2" height="7.2"/><rect x="35.5" y="21.3" width="7.2" height="7.2"/><rect x="7.1" y="28.4" width="7.2" height="7.2"/><rect x="14.2" y="28.4" width="7.2" height="7.2"/><rect x="21.3" y="28.4" width="7.2" height="7.2"/><rect x="28.4" y="28.4" width="7.2" height="7.2"/><rect x="35.5" y="28.4" width="7.2" height="7.2"/><rect x="42.6" y="28.4" width="7.2" height="7.2"/><rect x="49.7" y="28.4" width="7.2" height="7.2"/><rect x="21.3" y="35.5" width="7.2" height="7.2"/><rect x="35.5" y="35.5" width="7.2" height="7.2"/><rect x="21.3" y="42.6" width="7.2" height="7.2"/><rect x="35.5" y="42.6" width="7.2" height="7.2"/><rect x="28.4" y="49.7" width="7.2" height="7.2"/><rect x="28.4" y="56.8" width="7.2" height="7.2"/></g></svg></span><span>24px</span></span>
+        <span class="s"><span class="bar"><svg width="16" height="16" viewBox="0 0 64 64" shape-rendering="crispEdges"><g fill="#5656F6"><rect x="28.4" y="0" width="7.2" height="7.2"/><rect x="28.4" y="7.1" width="7.2" height="7.2"/><rect x="21.3" y="14.2" width="7.2" height="7.2"/><rect x="35.5" y="14.2" width="7.2" height="7.2"/><rect x="21.3" y="21.3" width="7.2" height="7.2"/><rect x="35.5" y="21.3" width="7.2" height="7.2"/><rect x="7.1" y="28.4" width="7.2" height="7.2"/><rect x="14.2" y="28.4" width="7.2" height="7.2"/><rect x="21.3" y="28.4" width="7.2" height="7.2"/><rect x="28.4" y="28.4" width="7.2" height="7.2"/><rect x="35.5" y="28.4" width="7.2" height="7.2"/><rect x="42.6" y="28.4" width="7.2" height="7.2"/><rect x="49.7" y="28.4" width="7.2" height="7.2"/><rect x="21.3" y="35.5" width="7.2" height="7.2"/><rect x="35.5" y="35.5" width="7.2" height="7.2"/><rect x="21.3" y="42.6" width="7.2" height="7.2"/><rect x="35.5" y="42.6" width="7.2" height="7.2"/><rect x="28.4" y="49.7" width="7.2" height="7.2"/><rect x="28.4" y="56.8" width="7.2" height="7.2"/></g></svg></span><span>16px</span></span>
+      </div>
+      <button class="dl" data-download="svg3" data-name="stella-pixelstar.svg">下载 SVG</button>
+    </div>
+  </section>
+
+  <!-- ============ 04 轨道星 ============ -->
+  <section class="card">
+    <div class="stage">
+      <div class="tile light"><span class="label">LIGHT</span>
+        <span class="mark"><svg id="svg4" class="msvg" width="86" height="64" viewBox="0 0 86 64" fill="none"><ellipse cx="43" cy="32" rx="36" ry="11" stroke="#5656F6" stroke-width="3.2" transform="rotate(-18 43 32)"/><circle cx="74.6" cy="27.6" r="4" fill="#5656F6"/><path d="M43 12 Q48 26 60 32 Q48 38 43 52 Q38 38 26 32 Q38 26 43 12 Z" fill="#5656F6"/></svg></span>
+        <span class="wm upper">STELLA</span>
+      </div>
+      <div class="tile dark"><span class="label">DARK</span>
+        <span class="mark"><svg class="msvg" width="86" height="64" viewBox="0 0 86 64" fill="none"><ellipse cx="43" cy="32" rx="36" ry="11" stroke="hsl(240 90% 72%)" stroke-width="3.2" transform="rotate(-18 43 32)"/><circle cx="74.6" cy="27.6" r="4" fill="hsl(240 90% 78%)"/><path d="M43 12 Q48 26 60 32 Q48 38 43 52 Q38 38 26 32 Q38 26 43 12 Z" fill="hsl(240 90% 78%)"/></svg></span>
+        <span class="wm upper">STELLA</span>
+      </div>
+    </div>
+    <div class="note">
+      <span class="num">04 / 05</span>
+      <h2>轨道星 <span class="en">ORBIT</span></h2>
+      <p><b>星星 + 一条倾斜的行星轨道环，环上缀一颗小卫星。</b>用"天体"补全 Stella（星）的意象：不只是星星本身，还有它周围运转的小宇宙。实心星形与细环一粗一细形成节奏。</p>
+      <ul class="fit">
+        <li>关于页、首页 banner 的图形主角</li>
+        <li>「相册 / 番剧 / 日记」等生活页面的气质</li>
+        <li>作为文章封面的角标装饰</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <span class="cap">SCALE</span>
+      <div class="size-row">
+        <span class="s"><span class="bar"><svg width="48" height="48" viewBox="0 0 86 64" fill="none"><ellipse cx="43" cy="32" rx="36" ry="11" stroke="#5656F6" stroke-width="3.4" transform="rotate(-18 43 32)"/><circle cx="74.6" cy="27.6" r="4.4" fill="#5656F6"/><path d="M43 12 Q48 26 60 32 Q48 38 43 52 Q38 38 26 32 Q38 26 43 12 Z" fill="#5656F6"/></svg></span><span>48px</span></span>
+        <span class="s"><span class="bar"><svg width="24" height="24" viewBox="0 0 86 64" fill="none"><ellipse cx="43" cy="32" rx="36" ry="11" stroke="#5656F6" stroke-width="3.8" transform="rotate(-18 43 32)"/><circle cx="74.6" cy="27.6" r="4.8" fill="#5656F6"/><path d="M43 12 Q48 26 60 32 Q48 38 43 52 Q38 38 26 32 Q38 26 43 12 Z" fill="#5656F6"/></svg></span><span>24px</span></span>
+        <span class="s"><span class="bar"><svg width="16" height="16" viewBox="0 0 86 64" fill="none"><ellipse cx="43" cy="32" rx="36" ry="11" stroke="#5656F6" stroke-width="4.2" transform="rotate(-18 43 32)"/><circle cx="74.6" cy="27.6" r="5.2" fill="#5656F6"/><path d="M43 12 Q48 26 60 32 Q48 38 43 52 Q38 38 26 32 Q38 26 43 12 Z" fill="#5656F6"/></svg></span><span>16px</span></span>
+      </div>
+      <button class="dl" data-download="svg4" data-name="stella-orbit.svg">下载 SVG</button>
+    </div>
+  </section>
+
+  <!-- ============ 05 星标字 ============ -->
+  <section class="card">
+    <div class="stage">
+      <div class="tile light"><span class="label">LIGHT</span>
+        <span class="wm-acc" style="position:relative;display:inline-block">
+          <svg class="msvg" width="22" height="22" viewBox="0 0 64 64" style="position:absolute;right:-16px;top:-14px"><path d="M32 8 Q39 26 56 32 Q39 38 32 56 Q25 38 8 32 Q25 26 32 8 Z" fill="#5656F6"/></svg>
+          <span class="wm upper" style="font-size:44px;color:var(--ink)">STELLA</span>
+        </span>
+      </div>
+      <div class="tile dark"><span class="label">DARK</span>
+        <span class="wm-acc" style="position:relative;display:inline-block">
+          <svg class="msvg" width="22" height="22" viewBox="0 0 64 64" style="position:absolute;right:-16px;top:-14px"><path d="M32 8 Q39 26 56 32 Q39 38 32 56 Q25 38 8 32 Q25 26 32 8 Z" fill="hsl(240 90% 78%)"/></svg>
+          <span class="wm upper" style="font-size:44px;color:#EFEFFB">STELLA</span>
+        </span>
+      </div>
+    </div>
+    <div class="note">
+      <span class="num">05 / 05</span>
+      <h2>星标字 <span class="en">WORDMARK</span></h2>
+      <p><b>不单独设图形标志，字标就是 Logo。</b>大号 STELLA 字标 + 悬浮在末字母上的小星——像落款处的一个笔尖闪光。最克制、最"品牌化"的一版：没有图形与文字的间距问题，排版永远成立。</p>
+      <ul class="fit">
+        <li>文章页头、页脚的品牌落款</li>
+        <li>喜欢"纯字标"品牌气质（如期刊刊头）</li>
+        <li>与任意图形标志搭配的辅助字标</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <span class="cap">SCALE</span>
+      <div class="size-row">
+        <span class="s"><span class="bar"><span style="position:relative;display:inline-block"><svg width="14" height="14" viewBox="0 0 64 64" style="position:absolute;right:-9px;top:-9px"><path d="M32 8 Q39 26 56 32 Q39 38 32 56 Q25 38 8 32 Q25 26 32 8 Z" fill="#5656F6"/></svg><span style="font-family:'Zen Maru Gothic';font-weight:900;font-size:26px;color:#1B1B2B;letter-spacing:.14em">STELLA</span></span></span><span>标题</span></span>
+        <span class="s"><span class="bar"><span style="position:relative;display:inline-block"><svg width="9" height="9" viewBox="0 0 64 64" style="position:absolute;right:-6px;top:-6px"><path d="M32 8 Q39 26 56 32 Q39 38 32 56 Q25 38 8 32 Q25 26 32 8 Z" fill="#5656F6"/></svg><span style="font-family:'Zen Maru Gothic';font-weight:900;font-size:16px;color:#1B1B2B;letter-spacing:.14em">STELLA</span></span></span><span>正文</span></span>
+        <span class="s"><span class="bar"><svg width="13" height="13" viewBox="0 0 64 64"><path d="M32 8 Q39 26 56 32 Q39 38 32 56 Q25 38 8 32 Q25 26 32 8 Z" fill="#5656F6"/></svg></span><span>favicon 用星</span></span>
+      </div>
+      <button class="dl" data-download="svg5" data-name="stella-wordmark.svg">下载 SVG</button>
+    </div>
+  </section>
+
+  <p class="footnote">选好之后告诉我编号，我可以继续细化（微调星形比例 / 字距 / 生成 favicon 全套尺寸 / 输出到站点 public 目录）。</p>
+</div>
+
+<script>
+document.querySelectorAll('.dl').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const id = btn.dataset.download;
+    const name = btn.dataset.name;
+    let svgText;
+    if (id === 'svg5') {
+      svgText = `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120">
+  <path d="M344 8 Q351 26 368 32 Q351 38 344 56 Q337 38 320 32 Q337 26 344 8 Z" fill="#5656F6"/>
+  <text x="0" y="80" font-family="Zen Maru Gothic, sans-serif" font-weight="900" font-size="56" letter-spacing="8" fill="#1B1B2B">STELLA</text>
+</svg>`;
+    } else {
+      const el = document.getElementById(id);
+      const clone = el.cloneNode(true);
+      clone.removeAttribute('class');
+      clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+      svgText = clone.outerHTML;
+    }
+    const blob = new Blob([svgText], { type: 'image/svg+xml' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url; a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+    URL.revokeObjectURL(url);
+  });
+});
+</script>
+</body>
+</html>
