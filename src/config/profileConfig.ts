@@ -18,12 +18,12 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "Gitee",
 			icon: "mdi:git",
-			url: "https://gitee.com/matsuzakayuki",
+			url: "https://gitee.com/chenxi-huang",
 		},
 		{
 			name: "GitHub",
 			icon: "fa7-brands:github",
-			url: "https://github.com/matsuzaka-yuki",
+			url: "https://github.com/2784134819?tab=repositories",
 		},
 		// {
 		// 	name: "Codeberg",
