@@ -4,11 +4,16 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	enable: true,
 	src: {
 		desktop: [
-			"https://image-blog-1334327128.cos.ap-guangzhou.myqcloud.com/image/bgg.png",
+			"/assets/desktop-banner/1.webp",
+			"/assets/desktop-banner/2.webp",
+			"/assets/desktop-banner/3.webp",
+			"/assets/desktop-banner/4.webp",
 		],
 		mobile: [
-			
-			"https://image-blog-1334327128.cos.ap-guangzhou.myqcloud.com/image/bgg.png",
+			"/assets/mobile-banner/1.webp",
+			"/assets/mobile-banner/2.webp",
+			"/assets/mobile-banner/3.webp",
+			"/assets/mobile-banner/4.webp",
 		],
 	},
 	position: "center",
