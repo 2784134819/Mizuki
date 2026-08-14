@@ -7,10 +7,8 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 			"https://image-blog-1334327128.cos.ap-guangzhou.myqcloud.com/image/bgg.png",
 		],
 		mobile: [
-			"/assets/mobile-banner/1.webp",
-			"/assets/mobile-banner/2.webp",
-			"/assets/mobile-banner/3.webp",
-			"/assets/mobile-banner/4.webp",
+			
+			"https://image-blog-1334327128.cos.ap-guangzhou.myqcloud.com/image/bgg.png",
 		],
 	},
 	position: "center",
