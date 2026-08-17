@@ -38,11 +38,11 @@ export interface AITool {
 // Replace the examples below with your own AI tools
 export const aiToolsData: AITool[] = [
 	{
-		id: "example-chat",
-		name: "Example Chat AI",
+		id: "Codex",
+		name: "Codex",
 		description: {
 			en: "A conversational AI assistant for writing and reasoning.",
-			zh_CN: "用于写作与推理的对话式 AI 助手。",
+			zh_CN: "OpenAI推出的harness应用",
 		},
 		icon: "material-symbols:smart-toy",
 		category: "chat",
