@@ -2,7 +2,7 @@
 title: "LangChain之02：模型的创建与调用"
 published: 2026-08-14
 description: "系统讲解LangChain模型的创建方式（专用类、init_chat_model、本地Ollama）与调用方式（invoke/stream/batch及异步版本）。"
-tags: [LangChain, 模型初始化, 模型调用, Ollama]
+tags: [LangChain]
 category: "LangChain"
 draft: false
 ---

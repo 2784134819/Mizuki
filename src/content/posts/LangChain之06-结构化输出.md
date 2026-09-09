@@ -2,7 +2,7 @@
 title: "LangChain之06：结构化输出"
 published: 2026-08-14
 description: "详解LangChain结构化输出的四种模式：Pydantic、TypedDict、JSON Schema、dataclass，涵盖用法、校验差异与两种获取方式。"
-tags: [LangChain, 结构化输出, Pydantic]
+tags: [LangChain]
 category: "LangChain"
 draft: false
 ---

@@ -2,7 +2,7 @@
 title: "LangChain之10：RAG"
 published: 2026-08-14
 description: "讲解RAG检索增强生成：覆盖文档加载、切分、向量化、向量存储与检索，并结合Atguigu客服知识库演示完整流程。"
-tags: [LangChain, RAG, 向量检索, 向量数据库]
+tags: [LangChain, RAG]
 category: "LangChain"
 draft: false
 ---

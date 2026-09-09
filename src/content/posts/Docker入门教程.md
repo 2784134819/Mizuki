@@ -2,7 +2,7 @@
 title: "Docker入门教程"
 published: 2026-08-14
 description: "从零开始的 Docker 全面入门：镜像、容器、仓库三大核心概念，Dockerfile 与 docker compose 详解，数据卷、网络、镜像加速与常用实战命令，附完整可运行示例。"
-tags: [Docker, 容器, 部署]
+tags: [Docker]
 category: "工具"
 draft: false
 ---

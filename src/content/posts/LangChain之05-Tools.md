@@ -2,7 +2,7 @@
 title: "LangChain之05：Tools"
 published: 2026-08-14
 description: "详解 LangChain 工具（Tools）的定义方式、参数描述与 schema，以及多工具调用和强制使用工具。"
-tags: [LangChain, 工具调用, 函数调用]
+tags: [LangChain]
 category: "LangChain"
 draft: false
 ---

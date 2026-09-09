@@ -1,9 +1,9 @@
 ﻿---
-title: "算法入门之KMP算法"
+title: "KMP算法"
 published: 2026-03-12
 description: "KMP 字符串匹配算法详解，从朴素做法出发引出 next 跳转表，说明如何利用已匹配的信息避免重复比较。"
-tags: [算法入门, KMP, 字符串]
-category: "算法入门"
+tags: [算法, KMP, 字符串]
+category: "算法"
 draft: false
 ---
 

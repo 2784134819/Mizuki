@@ -2,7 +2,7 @@
 title: "LangChain之03：LangSmith的使用"
 published: 2026-08-14
 description: "介绍 LangChain 生态的调试监控平台 LangSmith：核心功能、账号准备与环境配置，以及如何用代码接入并查看追踪与监控指标。"
-tags: [LangChain, LangSmith, 调试追踪, 监控评估]
+tags: [LangChain]
 category: "LangChain"
 draft: false
 ---

@@ -2,7 +2,7 @@
 title: "LangChain之07：智能体"
 published: 2026-08-14
 description: "本文讲解 LangChain 智能体（Agent）的创建与调用、工具绑定、结构化输出与流式输出，并以多功能智能助手实战串联核心用法。"
-tags: [LangChain, 智能体, 结构化输出, 流式输出]
+tags: [LangChain]
 category: "LangChain"
 draft: false
 ---

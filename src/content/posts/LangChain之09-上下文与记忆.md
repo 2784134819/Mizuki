@@ -2,7 +2,7 @@
 title: "LangChain之09：上下文与记忆"
 published: 2026-08-14
 description: "系统讲解 LangChain 记忆机制：短期记忆的 Checkpointer 持久化、上下文裁剪/删除/摘要治理，以及长期记忆的 Store 四层架构与读写检索 API。"
-tags: [LangChain, 上下文, 记忆]
+tags: [LangChain]
 category: "LangChain"
 draft: false
 ---

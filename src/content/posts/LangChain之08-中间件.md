@@ -2,7 +2,7 @@
 title: "LangChain之08：中间件"
 published: 2026-08-14
 description: "系统讲解 LangChain 1.x 中间件机制：内置中间件的用法、多中间件组合顺序与自定义 hook 函数的实现。"
-tags: [LangChain, 中间件, Middleware, Agent]
+tags: [LangChain]
 category: "LangChain"
 draft: false
 ---

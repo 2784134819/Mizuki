@@ -2,7 +2,7 @@
 title: "LangChain之04：Message与提示词模板"
 published: 2026-08-14
 description: "系统讲解 LangChain 的 Message 消息体系（内部结构、类型、格式、字段）与提示词模板（PromptTemplate 与 ChatPromptTemplate）的用法与高级特性。"
-tags: [LangChain, Message, 提示词模板, ChatPromptTemplate]
+tags: [LangChain]
 category: "LangChain"
 draft: false
 ---

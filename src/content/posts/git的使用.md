@@ -2,7 +2,7 @@
 title: "Git使用详解"
 published: 2026-03-12
 description: "Git的全部指令作用以及详细解析和使用场景说明"
-tags: [Git, 版本控制]
+tags: [Git]
 category: "工具"
 draft: false
 ---

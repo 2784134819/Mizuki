@@ -2,7 +2,7 @@
 title: "LangChain之01：LangChain概述"
 published: 2026-08-14
 description: "系统梳理 LangChain 的定位、发展脉络、四大支柱与开发准备，并介绍 RAG、Agent 等典型应用场景。"
-tags: [LangChain, 智能体, RAG, 环境搭建]
+tags: [LangChain]
 category: "LangChain"
 draft: false
 ---
